@@ -4,7 +4,7 @@ const Talent = ({className, name, desc}) => {
     return (
         <article className={className}>
             <h4>{name}</h4>
-            <p>{desc}</p>
+            <p>{desc}</p>                
         </article>
     )
 }

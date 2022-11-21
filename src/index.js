@@ -19,14 +19,14 @@ function DisplayTree() {
 	const incrementCounter = () => {
 		setCounter(counter + 1)
 	}
-	/*const decrementCounter = () => {
+	const decrementCounter = () => {
 		if (counter !== 0) {
 			setCounter(counter - 1)
 		}
-	}*/
+	}
 	
 	return (
-<body oncontextmenu="return false;">
+<body onContextMenu={(e)=>{e.preventDefault()}}>
 	<div className="container">
 		<header>
 			<div id="totalPoints">
@@ -42,14 +42,14 @@ function DisplayTree() {
 			</header>
 			<div className="tree_tiers">
 				<div className="tier unlocked" data-unlock="5" id="tierOne">
-					<div onClick={incrementCounter} onMouseOver={()=>handleMouseOver(1)} onMouseLeave={handleMouseOut} className="item one nature_wispsplode button" data-max="3">
-						{isHovering === 1 && <StyledTalent key={talent.id1} {...talents.find(talent => talent.id === 1)}></StyledTalent>} {<div class="points">{counter}</div>}
+					<div onClick={incrementCounter} onContextMenu={decrementCounter} onMouseOver={()=>handleMouseOver(1)} onMouseLeave={handleMouseOut} className="item one nature_wispsplode button" data-max="3">
+						{isHovering === 1 && <StyledTalent key={talent.id1} {...talents.find(talent => talent.id === 1)}></StyledTalent>} {<div className="points">{counter}</div>}
 					</div>
 					<div onClick={incrementCounter} onMouseOver={()=>handleMouseOver(2)} onMouseLeave={handleMouseOut} className="item two fire_fireball button" data-max="2">
-						{isHovering === 2 && <StyledTalent key={talent.id2} {...talents.find(talent => talent.id === 2)}></StyledTalent>} {<div class="points">{counter}</div>}
+						{isHovering === 2 && <StyledTalent key={talent.id2} {...talents.find(talent => talent.id === 2)}></StyledTalent>} {<div className="points">{counter}</div>}
 					</div>
 					<div onClick={incrementCounter} onMouseOver={()=>handleMouseOver(3)} onMouseLeave={handleMouseOut} className="item three racial_bloodrage button" data-max="5">
-						{isHovering === 3 && <StyledTalent key={talent.id3} {...talents.find(talent => talent.id === 3)}></StyledTalent>} {<div class="points">{counter}</div>}
+						{isHovering === 3 && <StyledTalent key={talent.id3} {...talents.find(talent => talent.id === 3)}></StyledTalent>} {<div className="points">{counter}</div>}
 					</div>
 					<div className="item four"></div>
 				</div>
