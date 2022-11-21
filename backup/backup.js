@@ -1,30 +1,20 @@
 import React from 'react'
+//import _ from 'lodash'
 import { useState } from 'react'
 import { createRoot } from 'react-dom/client'
 import { talents } from './talents'
-import StyledTalent from './StyledTalent'
+import Talent from './Talent'
+import CellComponent from './CellComponent'
 import './index.css'
 
 function DisplayTree() {
-	/* hover hook */
-	const [isHovering, setIsHovering] = useState(null)
-    const handleMouseOver = (num) => {
-        setIsHovering(num)
-    }
-    const handleMouseOut = () => {
-        setIsHovering(null)
-    }
-	/* onclick hook */
-	const [counter, setCounter] = useState(0)
-	const incrementCounter = () => {
-		setCounter(counter + 1)
-	}
-	/*const decrementCounter = () => {
-		if (counter !== 0) {
-			setCounter(counter - 1)
+		const [isHovering, setIsHovering] = useState(false)
+		const handleMouseOver = () => {
+			setIsHovering(true)
 		}
-	}*/
-	
+		const handleMouseOut = () => {
+			setIsHovering(false)
+		}
 	return (
 <body oncontextmenu="return false;">
 	<div className="container">
@@ -34,7 +24,7 @@ function DisplayTree() {
 			</div>
 		</header>
 		{talents.slice(1).map((talent) => {
-			console.log(counter)
+			console.log(talents[1])
 				return (
 		<div className="tree tree_one">
 			<header className="tree_header" id="tree_one_header">
@@ -42,28 +32,20 @@ function DisplayTree() {
 			</header>
 			<div className="tree_tiers">
 				<div className="tier unlocked" data-unlock="5" id="tierOne">
-					<div onClick={incrementCounter} onMouseOver={()=>handleMouseOver(1)} onMouseLeave={handleMouseOut} className="item one nature_wispsplode button" data-max="3">
-						{isHovering === 1 && <StyledTalent key={talent.id1} {...talents.find(talent => talent.id === 1)}></StyledTalent>} {<div class="points">{counter}</div>}
+					<div onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} className="item one nature_wispsplode button" data-max="3">
+						{isHovering && <Talent key={talent.id} {...talents[0]}></Talent>}
 					</div>
-					<div onClick={incrementCounter} onMouseOver={()=>handleMouseOver(2)} onMouseLeave={handleMouseOut} className="item two fire_fireball button" data-max="2">
-						{isHovering === 2 && <StyledTalent key={talent.id2} {...talents.find(talent => talent.id === 2)}></StyledTalent>} {<div class="points">{counter}</div>}
+					<div onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} className="item two fire_fireball button" data-max="2">
+						{isHovering && <Talent key={talent.id} {...talents[1]}></Talent>}
 					</div>
-					<div onClick={incrementCounter} onMouseOver={()=>handleMouseOver(3)} onMouseLeave={handleMouseOut} className="item three racial_bloodrage button" data-max="5">
-						{isHovering === 3 && <StyledTalent key={talent.id3} {...talents.find(talent => talent.id === 3)}></StyledTalent>} {<div class="points">{counter}</div>}
-					</div>
+					<div className="item three racial_bloodrage button" data-max="5"></div>
 					<div className="item four"></div>
 				</div>
 				<div className="tier tier_two" data-unlock="10">
-					<div onClick={incrementCounter} onMouseOver={()=>handleMouseOver(4)} onMouseLeave={handleMouseOut} className="item one nature_stoneclawtotem" data-max="2">
-						{isHovering === 4 && <StyledTalent key={talent.id4} {...talents.find(talent => talent.id === 4)}></StyledTalent>} <div class="points">{counter}</div>
-					</div>
-					<div onClick={incrementCounter} onMouseOver={()=>handleMouseOver(5)} onMouseLeave={handleMouseOut} className="item two nature_spiritarmor" data-max="3">
-						{isHovering === 5 && <StyledTalent key={talent.id5} {...talents.find(talent => talent.id === 5)}></StyledTalent>} <div class="points">{counter}</div>
-					</div>
+					<div className="item one nature_stoneclawtotem" data-max="2"></div>
+					<div className="item two nature_spiritarmor" data-max="3"></div>
 					<div className="item three"></div>
-					<div onClick={incrementCounter} onMouseOver={()=>handleMouseOver(6)} onMouseLeave={handleMouseOut} className="item four fire_immolation" data-max="3">
-						{isHovering === 6 && <StyledTalent key={talent.id6} {...talents.find(talent => talent.id === 6)}></StyledTalent>} <div class="points">{counter}</div>
-					</div>
+					<div className="item four fire_immolation" data-max="3"></div>
 				</div>
 				<div className="tier tier_three">
 					<div className="item one shadow_manaburn" data-max="1"></div>
@@ -205,5 +187,4 @@ function DisplayTree() {
 const container = document.getElementById('root')
 const root = createRoot(container)
 root.render(<DisplayTree />)
-
 
