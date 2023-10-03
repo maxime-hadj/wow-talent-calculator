@@ -15,7 +15,8 @@ const StyledTalent = styled(Talent)`
     padding: 0 10px 0 20px;
     border: 1.5px solid white;
     border-radius: 0.5px;
-    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.75);
+    z-index: 9999;
     `
 
 export default StyledTalent
