@@ -24,7 +24,6 @@ header {
 
 .tree {
 	margin: 5px auto;
-	border: 2px solid rgb(255, 255, 255);
 	min-width: 200px;
 	max-width: 200px;
 	background-size: cover;
@@ -95,9 +94,8 @@ header {
 
 .item[data-max] {
 	border: 1.5px solid rgb(23, 253, 23);
-	box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.4);
+	box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.4);
 	position: relative;
-	z-index: 9;
 }
 
 .points {
@@ -137,7 +135,7 @@ header {
 
 /* Tooltips */
 
-.tooltip{
+/* .tooltip{
   width: 400px;
   height: auto;
   background-color: #010a15c4;
@@ -152,7 +150,8 @@ header {
   border: 1.5px solid white;
   border-radius: 8px;
   box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-}
+} */
+
 .talent-title{
   font-size: 14px;
   line-height: 19px;
@@ -288,6 +287,7 @@ header {
 	width: 36px;
 	height: 36px;
 	background: url("https://jjcd.blog/wp-content/uploads/2019/07/sha_sprites.png");
+	z-index: 4;
 }
 .fire_enchantweapon {
 	width: 36px;
@@ -298,6 +298,7 @@ header {
 	width: 36px;
 	height: 36px;
 	background: url("https://classicdb.ch/images/icons/medium/ability_fiegndead.jpg");
+	z-index: 7;
 }
 .fire_flametounge {
 	width: 36px;
@@ -307,22 +308,26 @@ header {
 .fire_immolation {
 	width: 36px;
 	height: 36px;
-	background: url("https://jjcd.blog/wp-content/uploads/2019/07/sha_sprites.png");
+	background: url("https://classicdb.ch/images/icons/medium/ability_rogue_slicedice_grey.jpg");
+	z-index: 6;
 }
 .fire_sealoffire {
 	width: 36px;
 	height: 36px;
-	background: url("https://jjcd.blog/wp-content/uploads/2019/07/sha_sprites.png");
+	background: url("https://classicdb.ch/images/icons/medium/ability_rogue_feigndeath_grey.jpg");
+	z-index: 4;
 }
 .fire_volcano {
 	width: 36px;
 	height: 36px;
-	background: url("https://jjcd.blog/wp-content/uploads/2019/07/sha_sprites.png");
+	background: url("https://classicdb.ch/images/icons/medium/ability_rogue_kidneyshot_grey.jpg");
+	z-index: 3;
 }
 .frost_frostward {
 	width: 36px;
 	height: 36px;
-	background: url("https://jjcd.blog/wp-content/uploads/2019/07/sha_sprites.png");
+	background: url("https://classicdb.ch/images/icons/medium/ability_warrior_riposte_grey.jpg");
+	z-index: 5;
 }
 .frost_manarecharge {
 	width: 36px;
@@ -357,12 +362,14 @@ header {
 .lightning_lightningbolt {
 	width: 36px;
 	height: 36px;
-	background: url("https://jjcd.blog/wp-content/uploads/2019/07/sha_sprites.png");
+	background: url("https://classicdb.ch/images/icons/medium/spell_shadow_chilltouch_grey.jpg");
+	z-index: 2;
 }
 .nature_callstorm {
 	width: 36px;
 	height: 36px;
-	background: url("https://jjcd.blog/wp-content/uploads/2019/07/sha_sprites.png");
+	background: url("https://classicdb.ch/images/icons/medium/ability_criticalstrike_grey.jpg");
+	z-index: 5;
 }
 .nature_earthbindtotem {
 	width: 36px;
@@ -372,7 +379,8 @@ header {
 .nature_eyeofthestorm {
 	width: 36px;
 	height: 36px;
-	background: url("https://jjcd.blog/wp-content/uploads/2019/07/sha_sprites.png");
+	background: url("https://classicdb.ch/images/icons/medium/ability_poisons_grey.jpg");
+	z-index: 4;
 }
 .nature_healingtouch {
 	width: 36px;
@@ -432,7 +440,8 @@ header {
 .nature_spiritarmor {
 	width: 36px;
 	height: 36px;
-	background: url("//https://classicdb.ch/images/icons/medium/spell_shadow_deathscream_grey.jpg");
+	background: url("https://classicdb.ch/images/icons/medium/spell_shadow_deathscream_grey.jpg");
+	z-index: 6;
 }
 .nature_spiritwolf {
 	width: 36px;
@@ -442,7 +451,8 @@ header {
 .nature_stoneclawtotem {
 	width: 36px;
 	height: 36px;
-	background: url("//https://classicdb.ch/images/icons/medium/ability_druid_disembowel_grey.jpg");
+	background: url("https://classicdb.ch/images/icons/medium/ability_druid_disembowel_grey.jpg");
+	z-index: 6;
 }
 .nature_stoneskintotem {
 	width: 36px;
@@ -452,7 +462,8 @@ header {
 .nature_stormreach {
 	width: 36px;
 	height: 36px;
-	background: url("https://jjcd.blog/wp-content/uploads/2019/07/sha_sprites.png");
+	background: url("https://classicdb.ch/images/icons/medium/spell_ice_lament_grey.jpg");
+	z-index: 3;
 }
 .nature_tranquility {
 	width: 36px;
@@ -467,17 +478,20 @@ header {
 .nature_wispheal {
 	width: 36px;
 	height: 36px;
-	background: url("https://jjcd.blog/wp-content/uploads/2019/07/sha_sprites.png");
+	background: url("https://classicdb.ch/images/icons/medium/spell_nature_earthbindtotem_grey.jpg");
+	z-index: 1;
 }
 .nature_wispsplode {
 	width: 36px;
 	height: 36px;
 	background: url("https://classicdb.ch/images/icons/medium/ability_rogue_eviscerate.jpg");
+	z-index: 7;
 }
 .racial_bloodrage {
 	width: 36px;
 	height: 36px;
-	background: url("https://classicdb.ch/images/icons/medium/ability_racial_bloodrage.jpg")
+	background: url("https://classicdb.ch/images/icons/medium/ability_racial_bloodrage.jpg");
+	z-index: 7;
 }
 .shadow_grimward {
 	width: 36px;
@@ -487,5 +501,6 @@ header {
 .shadow_manaburn {
 	width: 36px;
 	height: 36px;
-	background: url("https://jjcd.blog/wp-content/uploads/2019/07/sha_sprites.png");
+	background: url("https://classicdb.ch/images/icons/medium/ability_warrior_decisivestrike_grey.jpg");
+	z-index: 5;
 }
